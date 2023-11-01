@@ -1,15 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+namespace backend.Controllers;
 
-namespace backend.Controllers
+[ApiController]
+[Route("[controller]")]
+public class PingController : Controller
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class PingController : Controller
-    {
-        [HttpGet]
-        public string Get()
-        {
-            return "pong";
-        }
-    }
+    [HttpGet]
+    public string Get() => "pong";
 }

@@ -15,6 +15,9 @@ namespace backend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen();
+            services.AddEntityFrameworkSqlite().AddDbContext<CreditDataContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -22,6 +25,9 @@ namespace backend
         {
             app.UseRouting();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
     }
 }
