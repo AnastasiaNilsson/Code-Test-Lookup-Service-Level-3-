@@ -1,10 +1,10 @@
-# Lookup Service - Level 3
+# Code Test: Lookup Service - Level 3
+
+> I have uploaded this test for hiring managers to get an idea of my skill level. This readme has been abbreviated and anonymized in order to not spoil the test for anyone who might come across it in the wild. The Cypress tests were provided for me, the rest is all my own code. I spent a few hours on the test in total.
+
+## Requirements
 
 Your task is to build a backend service that implements the [Lookup Service REST API](https://infra.devskills.app/lookup/api/1.0.0) and integrates with the [Credit Data REST API](https://infra.devskills.app/credit-data/api/1.0.0) to aggregate historical credit data.
-
-Please agree with the hiring team regarding the tech stack choice.
-
-## Additional requirements
 
 - Do your best to make the [provided E2E tests](cypress/e2e/test.cy.js) pass.
 - Implement DB caching controlled by `Cache-Control` headers, provided both in the requests to your service, as well as received in the responses from Credit Data API. 
@@ -16,45 +16,11 @@ Please agree with the hiring team regarding the tech stack choice.
 - Avoid duplication and extract re-usable modules where it makes sense. We want to see your approach to creating a codebase that is easy to maintain.
 - Unit test one module of choice. There is no need to test the whole app, as we only want to understand what you take into consideration when writing unit tests.
 
-## Getting started
+## Getting the tests to run
 
-<details>
-  <summary>If you run into a problem</summary>
-  
-  Navigate to [our community on GitHub](https://github.com/orgs/DevSkillsHQ/discussions/categories/help) to get assistance.
-
-</details>
-
-<details>
-  <summary>Import a starter project</summary>
-
-  We have created a set of starter projects with different tech stacks to help you get started quickly.
-
-  To import a starter project:
-  
-  1. Go to the "Actions" tab of your GitHub repository and select the "Setup boilerplate" workflow in the left side panel.
-  2. In the "Run workflow" dropdown, select the desired boilerplate along with the branch name where you want the boilerplate to be imported (e.g., `implementation`) and click the "Run workflow" button (you can find all starter projects' definitions [here](https://help.alvalabs.io/en/articles/7972852-supported-coding-test-boilerplates)).
-  
-  After the workflow has finished, your selected boilerplate will be imported to the specified branch, and you can continue from there.
-  
-  > ⚠️ **Custom setup**
-  > 
-  > If you instead want to set up a custom project, complete the steps below to make the E2E tests run correctly:
-  > 1. Update the `baseUrl` (where your frontend runs) in [cypress.config.js](cypress.config.js).
-  > 2. Update the [`build`](package.json#L5) and [`start`](package.json#L6) scripts in [package.json](package.json) to respectively build and start your app.
-  
-</details>
-
-<details>
-  <summary>Prepare for coding</summary>
-
-  To get this repository to your local machine, clone it with `git clone`.
-
-  Alternatively, spin up a pre-configured in-browser IDE by clicking on the "Code" tab in this repository and then "Create codespace on {branch_name}".
-  
-  ![CleanShot 2023-10-13 at 00 00 32@2x](https://github.com/DevSkillsHQ/transaction-management-fullstack-level-1/assets/1162212/598ff1ae-238d-4691-8b7c-eb2228fdefac)
-
-</details>
+Complete the steps below to make the E2E tests run correctly:
+1. Update the `baseUrl` (where your frontend runs) in [cypress.config.js](cypress.config.js).
+2. Update the [`build`](package.json#L5) and [`start`](package.json#L6) scripts in [package.json](package.json) to respectively build and start your app.
 
 <details>
   <summary>Running the E2E tests</summary>
@@ -67,20 +33,3 @@ Please agree with the hiring team regarding the tech stack choice.
   ```
 
 </details>
-
-## Submitting your solution for review
-
-1. Create a new `implementation` branch on this repository and push your code there.
-2. Create a new pull request from `implementation` **without merging it**.
-5. Document the tech decisions you've made by creating a new review on your PR ([see how](https://www.loom.com/share/94ae305e7fbf45d592099ac9f40d4274)).
-6. Await further instructions from the hiring team.
-
-## Time estimate
-
-Between 2 - 3 hours + the time to set up the project/environment (we suggest importing one of the provided project starters to save time).
-
-However, there is no countdown. The estimate is for you to plan your time.
-
----
-
-Authored by [Alva Labs](https://www.alvalabs.io/).

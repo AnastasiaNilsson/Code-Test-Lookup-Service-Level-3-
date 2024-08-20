@@ -1,5 +1,5 @@
 {
-  "name": "lookup-service-level-1",
+  "name": "lookup-service-level-3",
   "version": "1.0.0",
   "scripts": {
     "build": "dotnet build app/backend.sln",
